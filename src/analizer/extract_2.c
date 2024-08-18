@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   extract_2.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cadenegr <neo_dgri@hotmail.com>            +#+  +:+       +#+        */
+/*   By: njn0te <njn0te@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/30 12:10:19 by cadenegr          #+#    #+#             */
-/*   Updated: 2024/07/30 12:10:22 by cadenegr         ###   ########.fr       */
+/*   Updated: 2024/08/04 19:37:39 by njn0te           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ int	continue_extract_double_q(const char *line, t_m *m)
 	char	*extract;
 
 	i = -1;
+	extract = NULL;
 	while (line[++i] && ft_isquotes(line[i]) != 2)
 		if (line[i] == '\'')
 			break ;
@@ -46,6 +47,7 @@ int	input_whitespace(const char *line)
 	i = 0;
 	temp = NULL;
 	temp = ft_strdup(line);
+	extract = NULL;
 	while (line[i] && ft_iswhitespace(line[i]))
 		i++;
 	extract = ft_strtrim_start(line, i);

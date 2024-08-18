@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   display.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cadenegr <neo_dgri@hotmail.com>            +#+  +:+       +#+        */
+/*   By: njn0te <njn0te@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/30 11:45:21 by tnakajo           #+#    #+#             */
-/*   Updated: 2024/08/02 13:23:08 by cadenegr         ###   ########.fr       */
+/*   Updated: 2024/08/04 19:39:32 by njn0te           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	minishell_free(t_m *m)
 {
-	rl_clear_history();
+	clear_history();
 	free_t_history(m);
 	ft_lstclear(&m->lst, del);
 	ft_lstclear(&m->lenv, del);

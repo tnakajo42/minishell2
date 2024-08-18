@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   extract_3.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cadenegr <neo_dgri@hotmail.com>            +#+  +:+       +#+        */
+/*   By: njn0te <njn0te@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/30 12:10:27 by cadenegr          #+#    #+#             */
-/*   Updated: 2024/07/30 12:10:30 by cadenegr         ###   ########.fr       */
+/*   Updated: 2024/08/04 19:38:32 by njn0te           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,8 @@ int	finish_double(const char *line, t_m *m)
 	int		i;
 	char	*extract;
 
+	i = 0;
+	extract = NULL;
 	if (line[0] == '"')
 	{
 		extract = ft_strtrim_start(line, 1);
@@ -47,7 +49,6 @@ int	finish_double(const char *line, t_m *m)
 	}
 	else
 	{
-		i = 0;
 		while (line[i] && ft_isquotes(line[i]) != 2)
 			i++;
 		extract = ft_strtrim_start(line, i);
@@ -62,6 +63,7 @@ int	extract_pipe(const char *line, t_m *m)
 {
 	char	*extract;
 
+	extract = NULL;
 	if (line[0] == '|')
 	{
 		if (line[1] == '|')

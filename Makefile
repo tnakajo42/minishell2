@@ -14,7 +14,7 @@ INCLUDES = -I./include -I$(LIBFTDIR)/include
 
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
-LDFLAGS = -L$(LIBFTDIR) -lft_printf -lreadline -lhistory #-lncurses
+LDFLAGS = -L$(LIBFTDIR) -lft_printf -lreadline #-lhistory -lncurses
 RM = rm -rf
 
 .PHONY: all clean fclean re

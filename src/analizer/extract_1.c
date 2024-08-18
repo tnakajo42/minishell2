@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   extract_1.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tnakajo <tnakajo@student.42.fr>            +#+  +:+       +#+        */
+/*   By: njn0te <njn0te@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/30 10:45:27 by tnakajo           #+#    #+#             */
-/*   Updated: 2024/07/30 11:01:02 by tnakajo          ###   ########.fr       */
+/*   Updated: 2024/08/04 19:36:57 by njn0te           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,6 +85,7 @@ int	extract_right(const char *line, t_m *m)
 {
 	char	*extract;
 
+	extract = NULL;
 	if (ft_isredirection(line[0]) == 1)
 	{
 		if (line[1] == '>')
@@ -106,6 +107,7 @@ int	extract_left(const char *line, t_m *m)
 {
 	char	*extract;
 
+	extract = NULL;
 	if (ft_isredirection(line[0]) == 2)
 	{
 		if (line[1] == '<')
